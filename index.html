@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música Urbana</title>
+    <!-- Fuente animada desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Íconos de redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menú de navegación fijo -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#intro">Introducción</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#impacto">Impacto</a></li>
+            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#lista">Artistas</a></li>
+        </ul>
+        <!-- Botón cambio de tema -->
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <header>
+        <h1 class="titulo-animado">Música Urbana</h1>
+    </header>
+
+    <main>
+        <section id="intro" class="intro">
+            <h2>Introducción</h2>
+            <p>La música urbana mezcla ritmos como trap, reggaetón y afrobeat, conectando con millones de jóvenes en todo el mundo.</p>
+        </section>
+
+        <section id="historia" class="historia">
+            <h2>Historia</h2>
+            <p>Desde sus inicios en barrios populares, la música urbana ha evolucionado hasta convertirse en un fenómeno global.</p>
+        </section>
+
+        <section id="impacto" class="impacto">
+            <h2>Impacto Cultural</h2>
+            <p>Más allá del entretenimiento, este género refleja identidad, superación y creatividad, inspirando a nuevas generaciones.</p>
+        </section>
+
+        <section id="noticias" class="noticias">
+            <h2>Noticias Recientes</h2>
+            <article>
+                <h3>Nuevo lanzamiento de Magestick</h3>
+                <p>El sencillo "Corte Favela" ya está disponible en plataformas digitales, marcando el inicio de una nueva etapa artística.</p>
+            </article>
+            <article>
+                <h3>Bad Bunny anuncia gira</h3>
+                <p>El artista puertorriqueño confirmó fechas en Latinoamérica para su próxima gira mundial.</p>
+            </article>
+        </section>
+
+        <section id="galeria" class="galeria">
+            <h2>Galería</h2>
+            <div class="imagenes">
+                <img src="galeria1.jpg" alt="Concierto urbano">
+                <img src="galeria2.jpg" alt="Artista en estudio">
+                <img src="galeria3.jpg" alt="Portada de álbum">
+            </div>
+        </section>
+
+        <section id="videos" class="videos">
+            <h2>Videos Destacados</h2>
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/MIxBz1TqzJE" 
+                title="Video musical urbano" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Artistas destacados mejorados -->
+        <section id="lista" class="lista">
+            <h2>Artistas Destacados</h2>
+            <div class="artistas-grid">
+                <div class="artista-card">
+                    <img src="badbunny.jpg" alt="Bad Bunny">
+                    <h3>Bad Bunny</h3>
+                    <p>Fenómeno global del trap y reggaetón.</p>
+                    <a href="badbunny.html" class="btn">Ver más</a>
+                </div>
+                <div class="artista-card">
+                    <img src="sade.jpg" alt="Sade">
+                    <h3>Sade</h3>
+                    <p>Ícono del soul y R&B con voz única.</p>
+                    <a href="sade.html" class="btn">Ver más</a>
+                </div>
+                <div class="artista-card">
+                    <img src="michaeljackson.jpg" alt="Michael Jackson">
+                    <h3>Michael Jackson</h3>
+                    <p>El Rey del Pop, influencia eterna.</p>
+                    <a href="michaeljackson.html" class="btn">Ver más</a>
+                </div>
+                <div class="artista-card">
+                    <img src="magestick.jpg" alt="Magestick">
+                    <h3>Magestick</h3>
+                    <p>Artista emergente de trap y afrobeat.</p>
+                    <a href="magestick.html" class="btn">Ver más</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón volver arriba -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="top-btn">↑ Arriba</button>
+
+    <footer>
+        <p>Trabajo de Programación Web - Francisco Javier Urquieta Fuentes</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-spotify"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Script para cambio de tema -->
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            toggleBtn.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
