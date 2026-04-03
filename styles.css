@@ -1,0 +1,244 @@
+
+/* Fondo artístico musical */
+body {
+    background: url('fondo-musica.jpg') no-repeat center center fixed,
+                linear-gradient(135deg, #000000, #ffffff);
+    background-size: cover;   /* la imagen cubre toda la pantalla */
+    background-position: center; /* centrada */
+    color: #f5f5f5;
+    font-family: 'Orbitron', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 60px; /* espacio para el menú fijo */
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Tema claro con fondo alternativo */
+body.light-theme {
+    background: url('fondo-musica-claro.jpg') no-repeat center center fixed,
+                #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    color: #222;
+}
+
+/* Menú de navegación fijo */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #ff0000;
+}
+/* Botón cambio de tema */
+#theme-toggle {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#theme-toggle:hover {
+    transform: rotate(20deg);
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+/* Animación en el título principal */
+.titulo-animado {
+    animation: fadeInDown 2s ease-in-out;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Secciones */
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 20px;
+}
+h2 {
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 5px;
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+h2:hover {
+    color: #ff0000;
+    transform: scale(1.1);
+}
+
+/* Imagen general */
+img {
+    display: block;
+    margin: 20px auto;
+    width: 350px;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(255,255,255,0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+}
+img:hover {
+    transform: rotate(2deg) scale(1.05);
+    opacity: 1;
+}
+
+/* Botón volver arriba */
+.top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+.top-btn:hover {
+    background: #ff0000;
+}
+
+/* Pie de página */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    box-shadow: 0 -4px 8px rgba(255,255,255,0.2);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+footer .social-icons {
+    margin-top: 10px;
+}
+footer .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+footer .social-icons a:hover {
+    color: #ff0000;
+}
+
+/* Noticias, Galería, Videos y Contacto */
+.noticias, .galeria, .videos, .contacto {
+    margin: 40px 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+
+/* Galería */
+.galeria .imagenes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Contacto */
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contacto input, .contacto textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+.contacto button {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contacto button:hover {
+    background: #ff0000;
+}
+
+/* Artistas destacados en tarjetas */
+.artistas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.artista-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.artista-card img {
+    max-width: 100%;
+    height: 250px;       /* altura uniforme */
+    object-fit: cover;   /* recorta sin deformar */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+.artista-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255,255,255,0.3);
+}
+.artista-card img:hover {
+    transform: scale(1.05);
+}
+.artista-card h3 {
+    margin: 10px 0;
+    color: #fff;
+}
+.artista-card p {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+.artista-card .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.artista-card .btn:hover {
+    background: #ff0000;
+}
